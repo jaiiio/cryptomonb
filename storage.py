@@ -12,6 +12,8 @@ def ultimo_precio(moneda):
     
 def escribir_precio(timestamp, data):
     
+    os.makedirs("data", exist_ok=True)
+    
     mode = "a" if os.path.exists("data/prices.csv") else "w"
 
     with open("data/prices.csv", mode, newline = "") as file:
